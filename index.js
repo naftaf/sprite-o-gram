@@ -12,12 +12,12 @@ async function getPosts(){
     return j;
 }
 
-// async function getComments(){
-//     let r = await fetch('https://jsonplaceholder.typicode.com/comments');
-//     let c = await r.json();
-//     console.log(c);
-//     return c;
-// }
+async function getToDos(){
+    let response = await fetch('https://jsonplaceholder.typicode.com/todos');
+    let j = await response.json();
+    console.log(j);
+    return j;
+}
 
 getUsers()
 .then((json)=>{
@@ -32,18 +32,18 @@ getUsers()
 
 getPosts()
 .then((json)=>{
-    for (let i = 1; i < 5; i++){
+    for (let i = 1; i < 6; i++){
         let currPost = document.getElementById('post-' + i);
         currPost.innerHTML += '<h3>' + JSON.stringify(json[i].title).substring(1, JSON.stringify(json[i].title).length - 1) + '</h3> <br>';
         currPost.innerHTML += '<p>' + JSON.stringify(json[i].body).substring(1, JSON.stringify(json[i].body).length - 1) + '</p>';
     }
 })
 
-
-// getComments()
-// .then((json)=>{
-//     for (let i = 1; i < 5; i++){
-//         let currComment = document.getElementById('comments-' + i);
-//         currComment.innerHTML += '<p>' + JSON.stringify(json[i].name).substring(1, JSON.stringify(json[i].body).length - 1) + ':' + JSON.stringify(json[i].body).substring(1, JSON.stringify(json[i].body).length - 1) + '</p>';
-//     }
-// })
+getToDos()
+.then((json)=>{
+    let toDoList = document.getElementById("to-do-list");
+    for (let i = 1; i < 13; i++){
+        console.log(JSON.stringify(json[i].title).substring(1, JSON.stringify(json[i].title).length - 1))
+        toDoList.innerHTML += '<li>' + JSON.stringify(json[i].title).substring(1, JSON.stringify(json[i].title).length - 1) + '</li> <br>';
+    }
+})

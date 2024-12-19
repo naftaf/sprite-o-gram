@@ -2,7 +2,7 @@ body {
     background-color: #DEEFE7;
     height: 100vh;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Times New Roman", Times, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,12 +15,17 @@ body {
     background-color: #5dd4d6;
 }
 
+h1{
+    font-size:40px;
+    background-color: #5dd4d6;
+    text-align: left;
+}
 
 h3{
     background-color: #5dd4d6;
     text-align: left;
     width: 200px;
-    height: 125px;
+    height: 150px;
     margin-right: 10px;
 }
 
@@ -28,7 +33,7 @@ p{
     font-size: 25px;
 }
 
-#comments-1{
+/* #comments-1{
     font-size: 15px;
 }
 
@@ -42,7 +47,7 @@ p{
 
 #comments-4{
     font-size: 15px;
-}
+} */
 
 .container {
     display: flex;
@@ -55,7 +60,7 @@ p{
 #posts {
     flex: 3;
     margin-right: 20px;
-    height: 900px;
+    height: 1300px;
     border-style: solid;
     border-color: #159A9C;
     display: flex;
@@ -63,6 +68,7 @@ p{
     justify-content: flex-start;
     padding: 10px;
     box-sizing: border-box;
+    background-color: #74dadb67;
 }
 
 .post {
@@ -75,11 +81,13 @@ p{
     width: 175px;
     height: 175px;
     margin-right: 10px;
+    border-style: solid;
+    border-color: #159A9C;
 }
 
 #users {
     flex: 1;
-    height: 900px;
+    height: 1300px;
     border-style: solid;
     border-color: #159A9C;
     font-size: 25px;
@@ -89,5 +97,21 @@ p{
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    background-color: #74dadb67;
 }
 
+#to-do{
+    background-color: #74dadb67;
+    flex: 1;
+    height: 1300px;
+    border-style: solid;
+    border-color: #159A9C;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right:20px;
+}
